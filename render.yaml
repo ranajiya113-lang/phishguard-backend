@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: phishguard-backend
+    runtime: python
+    buildCommand: pip install fastapi uvicorn[standard] httpx scikit-learn numpy pydantic python-multipart
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
