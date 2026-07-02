@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Scanner - PhishGuard</title>
+    <link rel="stylesheet" href="scanner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<section class="scanner-page">
+
+    <h1 class="hero-title">
+        Don't trust every link.<br>
+        Scan before you click.
+    </h1>
+
+    <p class="subtitle">
+        PhishGuard analyzes URLs in seconds using machine learning,
+        domain intelligence, and threat detection techniques to identify
+        phishing attempts and protect you from malicious websites.
+    </p>
+
+    <!-- Scanner Card -->
+    <div class="scanner-card" id="urlScanner">
+
+        <div class="card-header">
+            <div class="icon-box">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+                <h2>URL Scanner</h2>
+                <p>Paste any URL to check for phishing or malicious content</p>
+            </div>
+        </div>
+
+        <div class="scan-box">
+            <i class="fa-solid fa-link" style="color: var(--text-dim); font-size: 1rem; flex-shrink:0;"></i>
+            <input
+                type="text"
+                id="urlInput"
+                placeholder="https://example.com"
+                autocomplete="off"
+                spellcheck="false"
+            />
+            <button id="urlScanBtn">
+                <i class="fa-solid fa-shield-halved"></i>
+                Scan URL
+            </button>
+        </div>
+
+    </div>
+
+    <!-- RESULT SECTION -->
+    <div id="resultContainer" class="result-container" style="display: none;">
+
+        <div class="summary-card">
+            <div class="summary-left">
+                <div class="status-icon">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                    <h2 id="statusText">Looks Safe</h2>
+                    <p id="scannedText">https://example.com</p>
+                </div>
+            </div>
+            <div class="risk-score">
+                <div class="score-circle">
+                    <span id="scoreValue">0</span>
+                    <small>/10</small>
+                </div>
+                <p>Risk Score</p>
+            </div>
+        </div>
+
+        <div class="details-grid">
+            <div class="detail-card">
+                <div class="detail-header">
+                    <h3>⚠️ Risk Factors</h3>
+                </div>
+                <ul id="riskList"></ul>
+            </div>
+            <div class="detail-card">
+                <div class="detail-header">
+                    <h3>✅ Positive Signals</h3>
+                </div>
+                <ul id="positiveList"></ul>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
