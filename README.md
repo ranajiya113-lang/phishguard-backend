@@ -84,7 +84,6 @@ phishguard-backend/
 
 **Jiya Rana**
 
-Cybersecurity & Machine Learning Enthusiast
 
 GitHub: https://github.com/ranajiya113-lang/phishguard-backend
 
