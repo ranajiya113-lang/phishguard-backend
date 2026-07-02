@@ -76,14 +76,7 @@ phishguard-backend/
 }
 
 
-6. 🎯 Future Improvements
 
-* Improve model performance with additional training data.
-* Add support for domain reputation services.
-* Implement Docker support.
-* Add automated testing.
-* Introduce CI/CD for deployment.
-* Enhance API logging and monitoring.
 
 ---
 
